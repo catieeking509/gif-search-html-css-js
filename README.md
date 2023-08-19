@@ -1,14 +1,14 @@
 # GIF Search
 
 Hosting Link: 
-Searches breweries by city.
+
 
 ## API Documentation
 
 https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${question}&limit=${num_of_gifs}&offset=0&rating=g&lang=en&bundle=messaging_non_clips
-Provide API key
-Input a search string
-Confine results by 1-20
+-Provide API key
+-Input a search string
+-Confine results by 1-20
 
  ## User Stories
 

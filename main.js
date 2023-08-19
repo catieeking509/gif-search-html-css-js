@@ -16,7 +16,7 @@ function renderGif(response) {
     document.querySelector(".js-results-section").innerHTML = html;
 }
 
-function queryResults(city, num) {
+function queryResults(topic, num) {
     fetch(
         `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${topic}&limit=${num}&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
     ).then ((x) => x.json())
@@ -25,7 +25,7 @@ function queryResults(city, num) {
 
 function formSubmitted(event) {
     event.preventDefault();
-    let queriedTopic = document.querySelector("[name=searchInput]").value;
+    let queriedTopic = document.querySelector("[name=search-input]").value;
     queriedTopic = queriedTopic.trim();
     queriedTopic = encodeURIComponent(queriedTopic);
     let numOfGif = document.querySelector("[name=number-of-gif]").value;
