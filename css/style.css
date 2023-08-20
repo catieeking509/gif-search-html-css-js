@@ -1,3 +1,8 @@
+/******************* Reset ********************************/
+/* not needed due to Bootstrap in the code */
+
+/* *************************general****************************/
+
 * {
     font-family: 'Syncopate', sans-serif;
 }
@@ -24,6 +29,13 @@ body {
 p {
     margin: 140px 80px 50px 80px;
 }
+
+img, svg {
+    overflow: hidden;
+    max-width: 300px;
+}
+
+/* *************************main styles ****************************/
 
 .title {
     font-family: 'Rock Salt', cursive;
@@ -60,20 +72,12 @@ p {
 .results-section {
     padding: 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     align-items: center;
     justify-items: center;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-}
-
-.sign-off {
-    display: flex;
-    justify-content: center;
-    font-weight: 900;
-    backdrop-filter: blur(50px);
-    margin-left: 900px;
 }
 
 /* *************************media queries ****************************/
@@ -83,11 +87,53 @@ p {
         margin: 120px 25px 25px 25px;
     }
 
-    .sign-off {
-        margin-left: 700px;
+    .results-section {
+        grid-template-columns: 1fr 1fr;
+        padding: 45px;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
     }
 }
 
-sm: 576px,
-md: 768px,
-lg: 992px,
+@media screen and (max-width: 992px) {
+    .centered {
+        margin: 100px 15px 25px 15px;
+    }
+    
+    .gif-search {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        text-align: center;
+    }
+    
+    .centered {
+        margin: 80px 10px 25px 10px;
+    }
+
+    .gif-search {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .form-control, .form-select, .btn {
+        margin: 10px;
+    }
+
+    .results-section {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .results-section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
