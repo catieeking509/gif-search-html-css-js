@@ -1,0 +1,93 @@
+* {
+    font-family: 'Syncopate', sans-serif;
+}
+
+body {
+    padding: 25px;
+    background-image: none;
+    background-image: url(../images/background-img.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.justify-content-center {
+    backdrop-filter: blur(50px);
+}
+
+.nav-item {
+    font-weight: 700;
+    --bs-nav-link-color: black;
+    --bs-nav-link-hover-color: darkslategray;
+}
+
+p {
+    margin: 140px 80px 50px 80px;
+}
+
+.title {
+    font-family: 'Rock Salt', cursive;
+    margin: 18px;
+    padding-top: 65px;
+    font-size: 40px;
+}
+
+.error {
+    text-align: center;
+    font-weight:500;
+    color: white;
+    background-color: darkgoldenrod;
+}
+
+.centered {
+    text-align: center;
+    font-weight: 900;
+    backdrop-filter: blur(50px);
+}
+
+.gif-search {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+}
+
+.form-control, .form-select, .btn {
+    margin: 0px 5px 0px 5px;
+    border: solid;
+    border-color: #198754;
+}
+
+.results-section {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: center;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.sign-off {
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    backdrop-filter: blur(50px);
+    margin-left: 900px;
+}
+
+/* *************************media queries ****************************/
+
+@media screen and (max-width: 1200px) {
+    p {
+        margin: 120px 25px 25px 25px;
+    }
+
+    .sign-off {
+        margin-left: 700px;
+    }
+}
+
+sm: 576px,
+md: 768px,
+lg: 992px,

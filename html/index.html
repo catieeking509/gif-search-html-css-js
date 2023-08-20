@@ -8,37 +8,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Syncopate&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Rock+Salt&family=Syncopate&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-light navbar-expand-sm bg-body-tertiary" style="background-color: rgba(0,0,0,.3)">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                <a class="nav-link" href="#">SEARCH</a>
-                <a class="nav-link" href="#">CONTACT</a>
-            </div>
-            </div>
-        </div>
-    </nav>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">SEARCH</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">OUR OTHER APPS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">CONTACT</a>
+        </li>
+    </ul>
     <h2 class="title">NEED A GIF?</h2>
-    <p class="centered">Type <u>whatever</u> you're looking for in the search bar below & be wowed by the results!</p>
+    <p class="centered">Type <i>whatever</i> you're looking for in the search bar below & be wowed by the results!</p>
     <form action="#" method="GET" class="gif-search js-gif-search">
-        <input type="text" id="searchInput" class="form-control" name="search-input" required>
+        <input type="text" id="search-input" class="form-control" name="search-input" required>
         <select class="form-select" aria-label="number of gif" name="number-of-gif">
             <option selected>1</option>
-            <option value="1">5</option>
-            <option value="2">10</option>
-            <option value="3">20</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
         </select>
         <button type="submit" class="btn btn-success">SEARCH</button>
     </form>
     <section class="results-section js-results-section"></section>
+    <section class="sign-off">...thanks for visiting</section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script src="./main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
