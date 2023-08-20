@@ -17,7 +17,8 @@ body {
 }
 
 .justify-content-center {
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(100px);
+    font-size: medium;
 }
 
 .nav-item {
@@ -54,7 +55,8 @@ img, svg {
 .centered {
     text-align: center;
     font-weight: 900;
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(100px);
+    font-size: larger;
 }
 
 .gif-search {
