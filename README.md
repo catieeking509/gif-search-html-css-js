@@ -40,5 +40,5 @@ https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${question}&limit=${nu
  ```
 ## Notes
 
-Gitignore sourced from my project one
-API: https://giphy.com
+-Gitignore sourced from my project one
+-API: https://giphy.com
