@@ -1,6 +1,7 @@
 
 const API_KEY = "xlQQPc8AJCtUQHulC1HTWSWe4lZr6Myy";
 
+
 function renderGif(response) {
     const gifData = response.data;
     let html = "";
@@ -11,16 +12,44 @@ function renderGif(response) {
             let url = gif.images.fixed_height.url;
             let alt = gif.title;
             html += `<img src="${url}" alt="${alt}" class="giphy-img" />`;
-        } 
+        }
     }
     document.querySelector(".js-results-section").innerHTML = html;
 }
 
-function queryResults(topic, num) {
+function getFavorites() {
+    let favorites = JSON.parse(localStorage.getItem('favorites'));
+    if (favorites === null) {
+        favorites = [];
+    }   
+    return favorites; 
+}
+
+function updateLocalStorage(topic, num) {
+    let favorites = getFavorites();
+    favorites = [{ topic, num }, ...favorites.slice(0, 4)];
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+}
+
+function renderFavorites() {
+    let favorites = getFavorites();
+    document.querySelector('.js-favorites-section').innerHTML = favorites.map(item => `
+        <p data-topic=${item.topic} data-num=${item.num}>
+            ${decodeURIComponent(item.topic)} (${item.num})
+        </p>`).join('');
+}
+
+function queryResults(topic, num, skipSave = false) {
     fetch(
         `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${topic}&limit=${num}&offset=0&rating=g&lang=en&bundle=messaging_non_clips`
     ).then ((x) => x.json())
-    .then(renderGif);
+    .then(response => {
+        if (!skipSave) {
+            updateLocalStorage(topic, num);
+            renderFavorites();
+        }
+        renderGif(response);
+    });
 }
 
 function formSubmitted(event) {
@@ -32,4 +61,17 @@ function formSubmitted(event) {
     queryResults(queriedTopic, numOfGif);
 }
 
+function favoriteClicked(event) {
+    let {topic, num} = event.target.dataset;
+    if (typeof topic === 'string' && typeof num === 'string') {
+        queryResults(topic, num, true);
+    }
+
+}
+
 document.querySelector(".js-gif-search").addEventListener("submit", formSubmitted);
+document.querySelector('.js-favorites-section').addEventListener('click', favoriteClicked);
+
+
+renderFavorites();
+

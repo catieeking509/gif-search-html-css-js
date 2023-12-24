@@ -17,7 +17,7 @@ body {
 }
 
 .justify-content-center {
-    backdrop-filter: blur(150px);
+    backdrop-filter: blur(25px);
     font-size: medium;
 }
 
@@ -55,7 +55,7 @@ img, svg {
 .centered {
     text-align: center;
     font-weight: 900;
-    backdrop-filter: blur(150px);
+    backdrop-filter: blur(25px);
     font-size: larger;
 }
 
@@ -66,9 +66,16 @@ img, svg {
 }
 
 .form-control, .form-select, .btn {
-    margin: 0px 5px 0px 5px;
+    margin: 15px;
     border: solid;
     border-color: #198754;
+}
+
+.favorites-section {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .results-section {

@@ -10,7 +10,7 @@ https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${question}&limit=${nu
 -Input a search string
 -Determine number of results 1-20
 
- ## User Stories
+## User Stories
 
  ```
  AS AN event organizer
@@ -26,19 +26,17 @@ https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${question}&limit=${nu
  TO SEE if there is one to use for the announcement
  ```
 
- ## Wireframes
+## Wireframes
 
  See the wireframes folder for a low-level wireframe
 
- ## Project Details
+## Project Details
 
  ```
  Catie King
  This project allows a person to search for GIFs 
  Put together using html, css, js
- Future improvements: better API that feeds into a previous project, better styling, and to improve understanding so this isn't such a headache
  ```
 ## Notes
 
--Gitignore sourced from my project one
--API: https://giphy.com
+-API: https://giphy.comfollo
