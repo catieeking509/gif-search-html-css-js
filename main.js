@@ -27,16 +27,16 @@ function getFavorites() {
 
 function updateLocalStorage(topic, num) {
     let favorites = getFavorites();
-    favorites = [{ topic, num }, ...favorites.slice(0, 4)];
+    favorites = [{ topic, num }, ...favorites.slice(0, 9)];
     localStorage.setItem('favorites', JSON.stringify(favorites));
 }
 
 function renderFavorites() {
     let favorites = getFavorites();
     document.querySelector('.js-favorites-section').innerHTML = favorites.map(item => `
-        <p data-topic=${item.topic} data-num=${item.num}>
+        <button data-topic=${item.topic} data-num=${item.num} class="btn btn-success">
             ${decodeURIComponent(item.topic)} (${item.num})
-        </p>`).join('');
+        </button>`).join('');
 }
 
 function queryResults(topic, num, skipSave = false) {

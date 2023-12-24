@@ -17,7 +17,7 @@ body {
 }
 
 .justify-content-center {
-    backdrop-filter: blur(25px);
+    text-shadow: 0 0 0.1em #f7f6f6;
     font-size: medium;
 }
 
@@ -27,13 +27,20 @@ body {
     --bs-nav-link-hover-color: darkslategray;
 }
 
-p {
-    margin: 140px 80px 50px 80px;
-}
-
 img, svg {
     overflow: hidden;
     max-width: 300px;
+}
+
+footer {
+    font-size: 10px;
+    font-family: cursive;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 80px;
+    text-shadow: 0 0 0.9em #f7f6f6;
 }
 
 /* *************************main styles ****************************/
@@ -43,6 +50,7 @@ img, svg {
     margin: 18px;
     padding-top: 65px;
     font-size: 40px;
+    text-shadow: 0 0 0.9em #f7f6f6;
 }
 
 .error {
@@ -55,8 +63,9 @@ img, svg {
 .centered {
     text-align: center;
     font-weight: 900;
-    backdrop-filter: blur(25px);
+    text-shadow: 0 0 0.9em #f7f6f6;
     font-size: larger;
+    margin: 50px;
 }
 
 .gif-search {
@@ -92,9 +101,6 @@ img, svg {
 /* *************************media queries ****************************/
 
 @media screen and (max-width: 1200px) {
-    p {
-        margin: 120px 25px 25px 25px;
-    }
 
     .results-section {
         grid-template-columns: 1fr 1fr;
